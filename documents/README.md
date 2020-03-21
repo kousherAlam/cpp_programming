@@ -20,6 +20,8 @@ https://www.glfw.org/
 ### Youtube Tutorial 
 - Cmake Good: https://www.youtube.com/playlist?list=PLK6MXr8gasrGmIiSuVQXpfFuE1uPT615s
 - CPP: https://www.youtube.com/playlist?list=PLlrATfBNZ98dudnM48yfGUldqGD0S4FFb
+- opengl: https://www.youtube.com/playlist?list=PLlrATfBNZ98foTJPJ_Ev03o2oq3-GGOS2
+
 
 
 
