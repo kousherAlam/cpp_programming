@@ -23,6 +23,7 @@ message(STATUS "Author: ${AUTHOR}")
 # Foreacha and lists example in cmake
 set(files "a.txt;b.txt;c.txt")
 message(STATUS "ALL FILES ${files}a")
+
 foreach(file ${files})
     message(STATUS "Fiename: ${file}")
 endforeach()
@@ -30,6 +31,10 @@ endforeach()
 
 message(STATUS)
 
+include_directories(
+    ./src/persons/src
+    ./src/services/users
+)
 
 # Added Persons library
 add_subdirectory(./src/persons)

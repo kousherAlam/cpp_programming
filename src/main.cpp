@@ -1,7 +1,7 @@
 #include <iostream>
-#include "./persons/src/Person.h"
-#include "./persons/src/Banker.h"
-#include "./services/users/user.service.h"
+#include "Person.h"
+#include "Banker.h"
+#include "user.service.h"
 
 #ifndef CMAKE_MACRO_SAMPLE
     #define CMAKE_MACRO_SAMPLE "NO SYSTEM NAME"

@@ -17,6 +17,7 @@
 .vscode 
 
 #builds dirs 
+build
 builds
 
 # Linker output
