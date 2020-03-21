@@ -34,7 +34,11 @@ message(STATUS)
 include_directories(
     ./src/persons/src
     ./src/services/users
+    ./libs/glfw-3.3.2.bin.MACOS/include
+    ./libs/glad
+    ./libs/utility
 )
+
 
 # Added Persons library
 add_subdirectory(./src/persons)
@@ -42,10 +46,7 @@ add_subdirectory(./src/persons)
 # added services library
 add_subdirectory(./src/services)
 
-# All the executable
-add_executable(
-    bin ./src/main.cpp
-)
+
 # UNIX, WIN32, WINRT, CYGWIN, APPLE are environment variables as flags set by default system
 if(UNIX)
     message("This is a ${CMAKE_SYSTEM_NAME} system")
@@ -71,7 +72,19 @@ endif()
 
 message(STATUS "Link Libraries ...")
 
+set(CMAKE_INCLUDE_CURRENT_DIR ON)
+
+
+# All the executable
+add_executable(
+    bin ./src/main.cpp
+
+    ./libs/glad/glad.c ./libs/glad/glad.h ./libs/glad/khrplatform.h 
+)
+
 target_link_libraries(bin PRIVATE person)
+
+target_link_libraries(bin PRIVATE ${CMAKE_SOURCE_DIR}/libs/glfw-3.3.2.bin.MACOS/lib-macos/libglfw.3.dylib)
 
 target_link_libraries(bin PRIVATE user_service)
 
