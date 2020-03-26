@@ -38,6 +38,36 @@
 - cmake, makefile what are those and why and how we should use them
 - c++ multiple return value 
 - template in c++ 
+template is like generic , but in cpp they are evalueate on the run time. template is one of the most powerful feature in cpp. It help us to compact our code in a dramatic way. sytax of c++ template in cpp is: 
+```c++
+template <typename T>
+T returnSame(T arg1){
+    return arg1;
+}
+// to call the function
+returnSame<int>(10);
+```
+template accept a type name, and it will generate the code with the appropriate type. and will compile it. 
+
+as template get evaluated at compile time and then compile and link. so we can use it to collect data from user which is need before the compiling. Example: 
+
+```c++
+template <int Size>
+class Array{
+private: 
+    int m_Size[Size];
+public: 
+    int getSize(){
+        return m_Size;
+    }
+}
+
+Array<5>() // now m_Size = 5;
+Array<15>() // now m_Size = 15;
+```
+
+
+
 - `heap` vs `stack` in c++ programming 
 - macro in c++ 
 - `auto` keyword 
@@ -166,3 +196,31 @@ compiler and liner flags enables engineers behavior of compiler during build pro
 For CLion, you can navigate to 
 - CLion -> Preferences -> Build, Execution and Deployment -> CMake -> Generation Path
 
+
+
+### CPP Optional
+std::optional 
+
+is use to handing data, which is may or may not be there. suppose for a file 
+a file can or can not be there ...
+
+std::optional<std::string> name = "value"
+
+
+
+### std::variant
+- get_if method 
+- 
+
+### std::get<type>(varName)
+
+### checking type of data in cpp 
+
+### cpp parsing data 
+- text to array 
+- string to bool 
+- type check 
+- 
+
+### show to store any type of data in cpp 
+std::any
