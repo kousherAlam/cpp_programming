@@ -35,6 +35,8 @@ builds
 *.la
 *.lo
 
+example.txt
+
 # Shared objects (inc. Windows DLLs)
 *.dll
 *.so
